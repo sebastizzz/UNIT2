@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Slideshow</title>
+</head>
+<body>
+    <h1>Slideshow Animat</h1>
+    <div class="slideshow">
+        <img src="images/CPU.jpg" class="slide active">
+        <img src="images/Memory.jpg" class="slide" style="display: none;">
+        <img src="images/Disk0.jpg" class="slide" style="display: none;">
+        <img src="images/Disk1.jpg" class="slide" style="display: none;">
+        <img src="images/Processes.jpg" class="slide" style="display: none;">
+    </div>
+    <button id="toggle-slideshow">Start</button>
+
+    <script>
+        let slides = document.querySelectorAll('.slide');
+        let currentIndex = 0;
+        let slideshowInterval;
+        let isRunning = false;
+
+        function changeSlide() {
+            slides[currentIndex].classList.remove('active');
+            slides[currentIndex].style.display = 'none';
+            currentIndex = (currentIndex + 1) % slides.length;
+            slides[currentIndex].classList.add('active');
+            slides[currentIndex].style.display = 'block';
+        }
+
+        document.getElementById('toggle-slideshow').addEventListener('click', () => {
+            const button = document.getElementById('toggle-slideshow');
+            if (!isRunning) {
+                // Set interval to change slides every 3 seconds
+                slideshowInterval = setInterval(changeSlide, 3000);
+                button.textContent = 'Stop';
+                isRunning = true;
+            } else {
+                clearInterval(slideshowInterval);
+                button.textContent = 'Start';
+                isRunning = false;
+            }
+        });
+    </script>
+</body>
+</html>

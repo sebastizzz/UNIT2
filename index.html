@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"></link>
+    <title>Nica_Sebastian</title>
+</head>
+<body>
+    <h1>Nica Sebastian</h1>
+    <h2>sebinica22@gmail.com</h2>
+    <h3>Componente si caracteristici</h3>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>denumire</th>
+                        <th>producator</th>
+                        <th>parametri</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CPU AMD Ryzen 5 4600H</td>
+                        <td>AMD</td>
+                        <td>Zen 2, 6 nuclee, 12 threads, 3.0 GHz base clock, GPU max 1500MHz, Socket FP6</td>
+                    </tr>
+                    <tr>
+                        <td>Disk-driver SSD</td>
+                        <td>Samsung</td>
+                        <td>500GB</td>
+                    </tr>
+                    <tr>
+                        <td>Memorie RAM</td>
+                        <td></td>
+                        <td>16GB, 15.4GB usable</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    <h3>Structura retelei</h3>
+        <img src="https://www.scientia.ro/images/stories/articles/tehnologie/2011/octombrie/ghid_retea/topologie_retea.jpg" class="img">
+    <h3>Caracteristici conexiune retea</h3>
+        <h4>Wi-fi</h4>
+            <ul>
+                <li>Connection type: 802.11ax</li>
+                <li>SSID: Wifi6-5Ghz</li>
+            </ul>
+    <h3>Monitorizare resurse</h3>
+    <button id="monitoring-button">Monitorizare resurse</button>
+            <div class="slideshow">
+                <img src="images/CPU.jpg" class="slide">
+                <img src="images/Memory.jpg" class="slide">
+                <img src="images/Disk0.jpg" class="slide">
+                <img src="images/Disk1.jpg" class="slide">
+                <img src="images/Processes.jpg" class="slide">
+            </div>
+
+            <script>
+                document.getElementById('monitoring-button').addEventListener('click', () => {
+                    window.open('slideshow.html', '_blank');});
+            </script>
+            <script src="script.js"></script>
+</body>
+</html>
+
